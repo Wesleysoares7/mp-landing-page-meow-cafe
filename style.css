@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-bg-color: #f7f2e8;
+    --main-text-color-900: #000000;
+    --main-text-color-800: #1a1a1a;
+    --main-text-color-700: #222222;
+    --main-text-color-600: #282828;
+    --main-heading-color: #3c0e0e;
+    --main-brand-color-600: #431b1b;
+    --main-brand-color-hover: #733535;
+    --main-brand-color-500: #4d1d1d;
+    --main-width: 80%;
+    --pink-400: #eb8e8e;
+    --pink-200: #f9c4c4;
+    --text-sm: 0.875rem;
+    --text-md: 1.25rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2rem;
+    --text-2xl: 2.5rem;
+    --text-3xl: 5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    width: var(--main-width);
+    margin: auto;
+    justify-content: space-between;
+    height: 10.5rem;
+    position: relative;
+}
+
+.home-conteiner img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 6rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-left p {
+    padding-right: 1rem;
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+.header-left a {
+    color: var(--main-heading-color);
+    font-size: var(--text-md);
+    font-weight: 500;
+}
+
+.button-primary {
+    color: white;
+    font-size: var(--text-md);
+    background-color: var(--main-brand-color-600);
+    height: 3rem;
+    padding-inline: 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    background-color: var(--main-brand-color-500);
+}
+
+.button-terciary {
+    color: var(--main-heading-color);
+    font-size: var(--text-md);
+    cursor: pointer;
+    background-color: transparent;
+}
