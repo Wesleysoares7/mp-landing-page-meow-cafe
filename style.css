@@ -71,9 +71,37 @@ header {
 }
 
 .header-left a {
+  position: relative;
   color: var(--main-heading-color);
   font-size: var(--text-md);
   font-weight: 500;
+  display: block;
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+}
+
+.header-left a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-heading-color);
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.header-left a::active::before {
+  background-color: #000;
+}
+
+.header-left a:hover::before,
+a:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 
 .button-primary {
@@ -98,28 +126,164 @@ header {
 }
 
 .home-conteiner {
-  margin-right: 65rem;
-  text-align: left;
+  width: var(--main-width);
+  margin: auto;
+}
+
+.home-text {
+  width: 30%;
 }
 
 .home-conteiner div {
   color: var(--main-heading-color);
   display: flex;
   flex-direction: column;
-  margin-left: 10.5rem;
 }
 
 .home-conteiner h2 {
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
   font-weight: 700;
 }
 
 .home-conteiner h1 {
-  font-size: 5rem;
+  font-size: var(--text-3xl);
   font-weight: 700;
+  line-height: 5rem;
 }
 
 .home-conteiner h3 {
   font-size: 1rem;
   font-weight: 400;
+}
+
+.cafes-conteiner {
+  display: flex;
+  flex-direction: column;
+  color: var(--main-heading-color);
+  margin-top: 10rem;
+  align-items: center;
+}
+
+.cafes-conteiner h1 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+  margin-bottom: 1rem;
+}
+
+.cafes-conteiner h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0rem;
+  left: 20%;
+  height: 1px;
+  width: 60%;
+  background-color: var(--main-heading-color);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.cafes-conteiner h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 40%;
+  text-align: center;
+}
+
+.button-quaternario {
+  color: var(--main-heading-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.img-graos {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.cards-conteiner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  gap: 1rem;
+  height: 29rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 3rem;
+  width: 19rem;
+  left: 16rem;
+  margin-top: 8rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-one {
+  background: linear-gradient(203deg, #f6c7c5 4.72%, #c27d7a 102.83%);
+}
+
+.card h2 {
+  text-align: center;
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.card h1 {
+  text-align: center;
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: white;
+}
+
+.card h3 {
+  text-align: center;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: white;
+}
+
+.button-card {
+  border-radius: 1.5625rem;
+  width: 15rem;
+  background: var(--main-bg-color);
+  color: var(--main-text-color-900);
+  font-size: var(--text-md);
+  padding-inline: var(--text-3xl);
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.icon-two {
+  background: linear-gradient(
+    203deg,
+    rgba(250, 250, 250, 0.95) 4.72%,
+    rgba(84, 21, 17, 0.58) 102.83%
+  );
+}
+
+.icon-three {
+  background: linear-gradient(
+    203deg,
+    rgba(10, 9, 9, 0.95) 4.72%,
+    rgba(84, 21, 17, 0.95) 102.83%
+  );
+}
+
+.card img {
+  height: 40%;
 }
